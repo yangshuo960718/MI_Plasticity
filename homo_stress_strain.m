@@ -5,14 +5,7 @@ lbda = 1.1538e9;
 mu = 0.7692e9;
 a = lbda + 2 * mu;
 
-<<<<<<< HEAD
 % load mesh
-=======
-% mesh
-<<<<<<< HEAD
->>>>>>> parent of 01dabef... add sq_0d4
-=======
->>>>>>> parent of 01dabef... add sq_0d4
 load('./mesh/sq_mesh0.mat');
 p = p';
 t = t';
@@ -68,18 +61,11 @@ Load2 = 0:-0.05:-1;
 Unload2 = -1:0.05:0;
 Load3 = 0:0.05:1;
 MacroStrain = [Load1, Unload1, Load2, Unload2, Load3] * 0.004;
-<<<<<<< HEAD
-<<<<<<< HEAD
 save('./Plot/trace-free/pp/0_stress_strain.mat', 'MacroStrain', 'HomoStress');
 %%
 %load('./Plot/trace-free/pp/0_stress_strain.mat', 'MacroStrain', 'HomoStress');
 plot(MacroStrain, HomoStress(:, 2), '-o');
-=======
+
 %save('./Plot/expo_hardening/0_stress_strain.mat', 'MacroStrain', 'HomoStress');
 plot(MacroStrain, HomoStress(:, 1), '-o');
->>>>>>> parent of 01dabef... add sq_0d4
-=======
-%save('./Plot/expo_hardening/0_stress_strain.mat', 'MacroStrain', 'HomoStress');
-plot(MacroStrain, HomoStress(:, 1), '-o');
->>>>>>> parent of 01dabef... add sq_0d4
 grid on;
