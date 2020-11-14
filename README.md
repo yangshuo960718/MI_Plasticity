@@ -8,28 +8,21 @@ RVE analysis for plasticity
 
 ```bash
 .
-├── MatFile 					# temp folder for .mat files
-├── Plot
-│   └── config
-│       ├── bc.svg
-│       ├── bc_trace_free.svg
-│       └── config.svg
-├── README.md
-├── ReportFile					# report files .rpt from Abaqus
-├── getmesh.m					# .inp->mesh.m
-├── hardening_plot.nb			# hardening curve plots in mma
-├── homo_stress_strain.m		# single stress-strain curve plot
-├── mesh						# mesh files .mat
-├── multi_stress_strain_plot.m	# final load circle plot
-├── rpt2mat.m					# transfer rpt->mat into MatFile
-├── sq_crack0					# all Abaqus files for r_a = 0
-├── sq_crack0d2
+├── MatFile                      # store temp *.mat file
+├── Plastic_report.md            # analysis report
+├── Plot                         # plot data and plots
+├── README.md                    # read me
+├── ReportFile                   # abaqus report file *.rpt
+├── getmesh.m                    # node.txt, ele.txt -> mesh.mat
+├── hardening_plot.nb            # plot hardening curve
+├── homo_stress_strain.m         # plot single stress-strain curve
+├── mesh                         # store mesh.mat
+├── multi_stress_strain_plot.m   # plot multi stress-strain curves
+├── rpt2mat.m                    # *.rpt -> *.mat
+├── sq_crack0                    # all abaqus files
 ├── sq_crack0d4
-├── sq_crack0d6
 └── sq_crack0d8
 ```
-
-
 
 ## Goals
 
@@ -45,3 +38,24 @@ RVE analysis for plasticity
    | ---------- | ---------------------------- | ---------- |
    |            |                              |            |
 
+## Work flow
+
+1. create and set RVE in abaqus (`*.cae`)
+
+2. output mesh from abaqus input file
+   
+   a. paste nodes and elements from `*.inp` to `node.txt`, `ele.txt`
+
+   b. run `getmesh.m` to get `mesh.mat`
+
+3. run abaqus analysis
+
+4. output report (`*.rpt`) from abaqus
+
+5. run `rpt2mat.m` to convert `*.rpt` to temporary mat file
+
+6. run `homo_stress_strain.m` and `multi_stress_strain_plot` to postprocess
+
+7. store plot data and plots in `./Plot`
+
+8. update `Plastic_report.md`
