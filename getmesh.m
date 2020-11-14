@@ -2,10 +2,10 @@ clear all;
 clc;
 
 % nodes.txt and element.txt are copied from abaqus_stress.inp
-FileDir = './sq_crack0/';
-MeshDir = './mesh/';
-node = importdata([FileDir, 'node.txt']);
-element = importdata([FileDir, 'ele.txt']);
+fileDir = './sq_crack0/';
+meshDir = './mesh/';
+node = importdata([fileDir, 'node.txt']);
+element = importdata([fileDir, 'ele.txt']);
 
 p = node(:, 2:4);
 p = p';
@@ -18,4 +18,4 @@ t = t';
 % p(2, :) = 100 * (p(2, :) + 0.2);
 
 %% save mesh
-save([MeshDir, './sq_mesh0.mat'], 'p', 't');
+save([meshDir, './sq_mesh0.mat'], 'p', 't');

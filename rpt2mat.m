@@ -49,15 +49,7 @@
 clc, clear
 
 % Open file
-<<<<<<< HEAD
-<<<<<<< HEAD
-fname = './ReportFile/sq_0_tf_pp.rpt';
-=======
-fname = './ReportFile/sq_0_expo.rpt';
->>>>>>> parent of 01dabef... add sq_0d4
-=======
-fname = './ReportFile/sq_0_expo.rpt';
->>>>>>> parent of 01dabef... add sq_0d4
+fname = './ReportFile/sq_0d4_tf_pp.rpt';
 fid = fopen(fname);
 if fid==-1
     error('File not found or permission denied.');

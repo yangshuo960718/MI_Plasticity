@@ -22,22 +22,22 @@ $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
 * Harding behavior
   
   $\sigma_Y=300$ MPa, $\varepsilon_Y=0.001429$
-  ![config](./Plot/hardening_plots/hardening_pp.svg)
+
+  ![hardening behavior - perfect plasticity](./Plot/hardening_plots/hardening_pp.svg)
 
 * Plots
   
   | Figure                                  | Dir                               |
-| --------------------------------------- | --------------------------------- |
+  | --------------------------------------- | --------------------------------- |
   | $\pm\text{Von Mises} -\varepsilon_{22}$ | `./Plot/trace-free/pp/vm.svg`     |
   | $\sigma_{22}-\varepsilon_{22}$          | `./Plot/trace-free/pp/s22e22.svg` |
   | $\sigma_{11}-\varepsilon_{22}$          | `./Plot/trace-free/pp/s11e22.svg` |
   
-  ![](./Plot/trace-free/pp/vm.svg)
+  ![vms](./Plot/trace-free/pp/vm.svg)
   
-  ![](./Plot/trace-free/pp/s22e22.svg)
+  ![s22e22](./Plot/trace-free/pp/s22e22.svg)
   
-  ![](./Plot/trace-free/pp/s11e22.svg)
-  
+  ![s11e22](./Plot/trace-free/pp/s11e22.svg)
 
 ### Trace-free: (b)  isotropic hardening (linear)
 
@@ -48,7 +48,12 @@ $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
 
   $\sigma_Y=300$ MPa, $\varepsilon_Y=0.001429$
 
-  ![](./Plot/hardening_plots/hardening_iso_li.svg)
+  ![hardening behavior - isotropic (linear)](./Plot/hardening_plots/hardening_iso_li.svg)
 
 * Plots
 
+  | Figure                                  | Dir                                            |
+  | --------------------------------------- | ---------------------------------------------- |
+  | $\pm\text{Von Mises} -\varepsilon_{22}$ | `./Plot/trace-free/iso_hard_linear/vm.svg`     |
+  | $\sigma_{22}-\varepsilon_{22}$          | `./Plot/trace-free/iso_hard_linear/s22e22.svg` |
+  | $\sigma_{11}-\varepsilon_{22}$          | `./Plot/trace-free/iso_hard_linear/s11e22.svg` |
