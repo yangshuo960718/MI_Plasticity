@@ -49,7 +49,7 @@
 clc, clear
 
 % Open file
-fname = './ReportFile/sq_0d4_tf_pp.rpt';
+fname = './ReportFile/sq_0_tf_iso_li.rpt';
 fid = fopen(fname);
 if fid==-1
     error('File not found or permission denied.');
