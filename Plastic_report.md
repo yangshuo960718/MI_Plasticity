@@ -54,6 +54,12 @@ $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
 
   | Figure                                  | Dir                                            |
   | --------------------------------------- | ---------------------------------------------- |
-  | $\pm\text{Von Mises} -\varepsilon_{22}$ | `./Plot/trace-free/iso_hard_linear/vm.svg`     |
-  | $\sigma_{22}-\varepsilon_{22}$          | `./Plot/trace-free/iso_hard_linear/s22e22.svg` |
-  | $\sigma_{11}-\varepsilon_{22}$          | `./Plot/trace-free/iso_hard_linear/s11e22.svg` |
+  | $\pm\text{Von Mises} -\varepsilon_{22}$ | `./Plot/trace-free/iso_li/vm.svg`     |
+  | $\sigma_{22}-\varepsilon_{22}$          | `./Plot/trace-free/iso_li/s22e22.svg` |
+  | $\sigma_{11}-\varepsilon_{22}$          | `./Plot/trace-free/iso_li/s11e22.svg` |
+
+  ![vms](./Plot/trace-free/iso_li/vm.svg)
+  
+  ![s22e22](./Plot/trace-free/iso_li/s22e22.svg)
+  
+  ![s11e22](./Plot/trace-free/iso_li/s11e22.svg)
