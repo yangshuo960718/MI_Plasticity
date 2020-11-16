@@ -30,13 +30,13 @@ RVE analysis for plasticity
 
    | perfect plasticity | isotropic hardening (linear) | isotropic hardening (exponential) | kinematic hardening |
    | ------------------ | ---------------------------- | --------------------------------- | ------------------- |
-   | ✔                  |                              |                                   |                     |
+   | ✔                 |  ✔                           |          doing                      |                     |
 
 2. RVE with **linear hardening** model on different loading paths
 
    | trace-free | uniaxial tension/compression | shear test |
    | ---------- | ---------------------------- | ---------- |
-   |            |                              |            |
+   | ✔          |                              |            |
 
 ## Work flow
 

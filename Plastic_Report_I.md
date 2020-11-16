@@ -46,7 +46,9 @@ $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
 
 * Harding behavior
 
-  $\sigma_Y=300$ MPa, $\varepsilon_Y=0.001429$
+  $K(\alpha)=\sigma_Y+\overline{K}\alpha$
+
+  where $\sigma_Y=300$ MPa, $\overline{K}=100$ GPa.
 
   ![hardening behavior - isotropic (linear)](./Plot/hardening_plots/hardening_iso_li.svg)
 
@@ -63,3 +65,24 @@ $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
   ![s22e22](./Plot/trace-free/iso_li/s22e22.svg)
   
   ![s11e22](./Plot/trace-free/iso_li/s11e22.svg)
+  
+### Trace-free: (c)  isotropic hardening (exponential)
+
+* BC's: $\overline{\varepsilon}=\varepsilon_{11}\mathbf{e}_1\otimes\mathbf{e}_1+\varepsilon_{22}\mathbf{e}_2\otimes\mathbf{e}_2+\varepsilon_{33}\mathbf{e}_3\otimes\mathbf{e}_3,$ where $\varepsilon_{22}=0\rightarrow0.004\rightarrow-0.004\rightarrow0.004,$
+  $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
+
+* Harding behavior
+
+  $K(\alpha)=\sigma_Y+\theta\overline{H}\alpha+(\overline{K}_{\infty}-\overline{K}_0)[1-\exp(-\delta\alpha)]$
+
+  where $\sigma_Y=300$ MPa, $\overline{H}=0$, $\overline{K}_{\infty}-\overline{K}_0=100$ GPa, $\delta=1500$
+
+  ![hardening behavior - isotropic (linear)](./Plot/hardening_plots/hardening_iso_ex.svg)
+
+* Plots
+
+  | Figure                                  | Dir                                            |
+  | --------------------------------------- | ---------------------------------------------- |
+  | $\pm\text{Von Mises} -\varepsilon_{22}$ | `./Plot/trace-free/iso_ex/vm.svg`     |
+  | $\sigma_{22}-\varepsilon_{22}$          | `./Plot/trace-free/iso_ex/s22e22.svg` |
+  | $\sigma_{11}-\varepsilon_{22}$          | `./Plot/trace-free/iso_ex/s11e22.svg` |
