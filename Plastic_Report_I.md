@@ -1,6 +1,7 @@
-# RVE analysis report
+<h1 style="text-align: center"> MI Plasticity - RVE analysis report  </h1>
+<div style="text-align: center">Yangyuanchen Liu</div>
 
-## RVE settings
+## 1. RVE settings
 
 * Material parameters: $\lambda=E\nu/(1+\nu)(1-2\nu),\mu=E/2(1+\nu)$
 
@@ -12,9 +13,9 @@
 
   ![config](./Plot/config/config.svg)
 
-## Trace-free test
+## 2. Trace-free test
 
-### Trace-free: (a) perfect plasticity
+### 2.1 Trace-free: (a) perfect plasticity
 
 * BC's: $\overline{\varepsilon}=\varepsilon_{11}\mathbf{e}_1\otimes\mathbf{e}_1+\varepsilon_{22}\mathbf{e}_2\otimes\mathbf{e}_2+\varepsilon_{33}\mathbf{e}_3\otimes\mathbf{e}_3,$ where $\varepsilon_{22}=0\rightarrow0.004\rightarrow-0.004\rightarrow0.004,$
 $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
@@ -39,7 +40,7 @@ $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
   
   ![s11e22](./Plot/trace-free/pp/s11e22.svg)
 
-### Trace-free: (b)  isotropic hardening (linear)
+### 2.2 Trace-free: (b)  isotropic hardening (linear)
 
 * BC's: $\overline{\varepsilon}=\varepsilon_{11}\mathbf{e}_1\otimes\mathbf{e}_1+\varepsilon_{22}\mathbf{e}_2\otimes\mathbf{e}_2+\varepsilon_{33}\mathbf{e}_3\otimes\mathbf{e}_3,$ where $\varepsilon_{22}=0\rightarrow0.004\rightarrow-0.004\rightarrow0.004,$
   $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
@@ -66,7 +67,8 @@ $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
   
   ![s11e22](./Plot/trace-free/iso_li/s11e22.svg)
   
-### Trace-free: (c)  isotropic hardening (exponential)
+
+### 2.3 Trace-free: (c)  isotropic hardening (exponential)
 
 * BC's: $\overline{\varepsilon}=\varepsilon_{11}\mathbf{e}_1\otimes\mathbf{e}_1+\varepsilon_{22}\mathbf{e}_2\otimes\mathbf{e}_2+\varepsilon_{33}\mathbf{e}_3\otimes\mathbf{e}_3,$ where $\varepsilon_{22}=0\rightarrow0.004\rightarrow-0.004\rightarrow0.004,$
   $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
@@ -86,3 +88,9 @@ $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
   | $\pm\text{Von Mises} -\varepsilon_{22}$ | `./Plot/trace-free/iso_ex/vm.svg`     |
   | $\sigma_{22}-\varepsilon_{22}$          | `./Plot/trace-free/iso_ex/s22e22.svg` |
   | $\sigma_{11}-\varepsilon_{22}$          | `./Plot/trace-free/iso_ex/s11e22.svg` |
+  
+  ![vms](./Plot/trace-free/iso_ex/vm.svg)
+  
+  ![s22e22](./Plot/trace-free/iso_ex/s22e22.svg)
+  
+  ![s11e22](./Plot/trace-free/iso_ex/s11e22.svg)

@@ -67,5 +67,5 @@ MacroStrain = [Load1, Unload1, Load2, Unload2, Load3] * 0.004;
 %plot(MacroStrain, HomoStress(:, 1), '-o');
 plot(MacroStrain, HomoStress(:, 2), '-o');
 
-%save('./Plot/trace-free/iso_hard_linear/0d8_stress_strain.mat', 'MacroStrain', 'HomoStress');
+save('./Plot/trace-free/iso_ex/0d8_stress_strain.mat', 'MacroStrain', 'HomoStress');
 grid on;

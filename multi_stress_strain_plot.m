@@ -7,7 +7,7 @@ clc, clear
 % g_d8 = (1 - d8)^2;
 
 % load abaqus data
-fileDir = './Plot/trace-free/iso_li/';
+fileDir = './Plot/trace-free/iso_ex/';
 
 sq_0 = load([fileDir, '0_stress_strain.mat']);
 e_0 = sq_0.MacroStrain'; % nominal strain
@@ -43,12 +43,12 @@ vm_8 = von_mises(s_8);
 % plot(e_0t, s_0t_22, 'r', e_4t, s_4t_22, 'b', e_8t, s_8t_22);
 vm_plot = figure(1);
 [sign_0, sign_4, sign_8] = deal(ones(size(e_0)));
-sign_0(29:71) = -1;
-sign_4(29:71) = -1;
-sign_8(30:71) = -1;% sign is manually set
+sign_0(31:72) = -1;
+sign_4(31:72) = -1;
+sign_8(32:72) = -1;% sign is manually set
 plot(e_0, vm_0 .* sign_0, 'r', e_4, vm_4 .* sign_4, 'b', e_8, vm_8 .* sign_8); % von misess of homogenized stress
 grid on;
-title('Trace-free - isotropic linear - Von Mises');
+title('Trace-free - isotropic exponential - Von Mises');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('\pm Von Mises [Pa]');
@@ -57,7 +57,7 @@ ylabel('\pm Von Mises [Pa]');
 s22e22_plot = figure(2);
 plot(e_0, s_0(:, 2), 'r', e_4, s_4(:, 2), 'b', e_8, s_8(:, 2));
 grid on;
-title('Trace-free, isotropic linear, \sigma_{22} - \epsilon_{22}');
+title('Trace-free, isotropic exponential, \sigma_{22} - \epsilon_{22}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{22} [Pa]');
@@ -66,7 +66,7 @@ ylabel('Stress \sigma_{22} [Pa]');
 s11e22_plot = figure(3);
 plot(e_0, s_0(:, 1), 'r', e_4, s_4(:, 1), 'b', e_8, s_8(:, 1));
 grid on;
-title('Trace-free, isotropic linear, \sigma_{11} - \epsilon_{22}');
+title('Trace-free, isotropic exponential, \sigma_{11} - \epsilon_{22}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{11} [Pa]');
