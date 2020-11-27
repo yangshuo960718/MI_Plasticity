@@ -30,20 +30,20 @@ RVE analysis for plasticity
 
    | perfect plasticity | isotropic hardening (linear) | isotropic hardening (exponential) | kinematic hardening |
    | ------------------ | ---------------------------- | --------------------------------- | ------------------- |
-   | ✔                 |  ✔                           |          doing                      |                     |
+   | ✔                 |  ✔                           |          ✔                     | ✔ |
 
 2. RVE with **linear hardening** model on different loading paths
 
-   | trace-free | uniaxial tension/compression | shear test |
-   | ---------- | ---------------------------- | ---------- |
-   | ✔          |                              |            |
+   | trace-free | uniaxial tension |  uniaxial compression    | shear test |
+   | ---------- | ---------------- | ---- | ---------- |
+   | ✔          |                  |      | e12/e13    |
 
 ## Work flow
 
 1. create and set RVE in abaqus (`*.cae`)
 
 2. output mesh from abaqus input file
-   
+  
    a. paste nodes and elements from `*.inp` to `node.txt`, `ele.txt`
 
    b. run `getmesh.m` to get `mesh.mat`

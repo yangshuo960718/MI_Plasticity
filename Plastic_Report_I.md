@@ -94,3 +94,31 @@ $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
   ![s22e22](./Plot/trace-free/iso_ex/s22e22.svg)
   
   ![s11e22](./Plot/trace-free/iso_ex/s11e22.svg)
+  
+
+### 2.4 Trace-free: (d) kinematic hardening
+
+* BC's: $\overline{\varepsilon}=\varepsilon_{11}\mathbf{e}_1\otimes\mathbf{e}_1+\varepsilon_{22}\mathbf{e}_2\otimes\mathbf{e}_2+\varepsilon_{33}\mathbf{e}_3\otimes\mathbf{e}_3,$ where $\varepsilon_{22}=0\rightarrow0.004\rightarrow-0.004\rightarrow0.004,$
+   $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
+
+* Harding behavior
+
+  ![hardening behavior - isotropic (linear)](./Plot/hardening_plots/hardening_iso_li.svg)
+
+  $K(\alpha)=\sigma_Y+\overline{K}\alpha$
+
+  where $\sigma_Y=300$ MPa, $\overline{K}=100$ GPa.
+
+* Plots
+
+  | Figure                                  | Dir                                            |
+  | --------------------------------------- | ---------------------------------------------- |
+  | $\pm\text{Von Mises} -\varepsilon_{22}$ | `./Plot/trace-free/kin_li/vm.svg`     |
+  | $\sigma_{22}-\varepsilon_{22}$          | `./Plot/trace-free/kin_li/s22e22.svg` |
+  | $\sigma_{11}-\varepsilon_{22}$          | `./Plot/trace-free/kin_li/s11e22.svg` |
+
+  ![vms](./Plot/trace-free/kin_li/vm.svg)
+  
+  ![s22e22](./Plot/trace-free/kin_li/s22e22.svg)
+  
+  ![s11e22](./Plot/trace-free/kin_li/s11e22.svg)
