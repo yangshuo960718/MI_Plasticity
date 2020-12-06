@@ -149,6 +149,14 @@ $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
   
   ![vms](./Plot/multi-load/tension/vm.svg)
   
+  ![s11e22](./Plot/multi-load/tension/s11e22.svg)
+  
   ![s22e22](./Plot/multi-load/tension/s22e22.svg)
   
-  ![s11e22](./Plot/multi-load/tension/s11e22.svg)
+  ![s33e22](./Plot/multi-load/tension/s33e22.svg)
+  
+  ![s12e22](./Plot/multi-load/tension/s12e22.svg)
+  
+  ![s13e22](./Plot/multi-load/tension/s13e22.svg)
+  
+  ![s23e22](./Plot/multi-load/tension/s23e22.svg)
