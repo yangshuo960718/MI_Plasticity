@@ -36,7 +36,7 @@ RVE analysis for plasticity
 
    | trace-free | uniaxial tension |  uniaxial compression    | shear test |
    | ---------- | ---------------- | ---- | ---------- |
-   | ✔          |                  |      | e12/e13    |
+   | ✔          | ✔ |      | e12/e13    |
 
 ## Work flow
 

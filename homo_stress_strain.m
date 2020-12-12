@@ -56,7 +56,7 @@ end
 
 %% plot stress-strain curve
 % StepTime = [0:0.02:1];
-% HomoStrain = StepTime * 0.004; % E = 200GPa = 2e11
+% HomoStrain = StepTime * 0.004; % E = 210GPa
 Load1 = 0:0.05:1; % 20 frames
 Unload1 = 1:-0.05:0; % 20 frames
 Load2 = 0:-0.05:-1;
@@ -64,9 +64,9 @@ Unload2 = -1:0.05:0;
 Load3 = 0:0.05:1;
 MacroStrain = [Load1, Unload1, Load2, Unload2, Load3] * 0.004;
 %%
-%load('./Plot/multi-load/tension/0d4_stress_strain.mat', 'MacroStrain', 'HomoStress');
+%load('./Plot/multi-load/shear12/0_stress_strain.mat', 'MacroStrain', 'HomoStress');
 %plot(MacroStrain, HomoStress(:, 1), '-o');
-plot(MacroStrain, HomoStress(:, 2), '-o');
+plot(MacroStrain, HomoStress(:, 4), '-o');
 
-save('./Plot/multi-load/tension/0d4_stress_strain.mat', 'MacroStrain', 'HomoStress');
+%save('./Plot/multi-load/shear12/0d4_stress_strain.mat', 'MacroStrain', 'HomoStress');
 grid on;

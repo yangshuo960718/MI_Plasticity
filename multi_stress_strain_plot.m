@@ -7,7 +7,7 @@ clc, clear
 % g_d8 = (1 - d8)^2;
 
 % load abaqus data
-fileDir = './Plot/multi-load/tension/';
+fileDir = './Plot/multi-load/compression/';
 
 sq_0 = load([fileDir, '0_stress_strain.mat']);
 e_0 = sq_0.MacroStrain'; % nominal strain
@@ -44,11 +44,11 @@ vm_8 = von_mises(s_8);
 vm_plot = figure(1);
 [sign_0, sign_4, sign_8] = deal(ones(size(e_0)));
 sign_0(32:74) = -1;
-sign_4(31:73) = -1;
-sign_8(27:72) = -1;% sign is manually set
+sign_4(32:73) = -1;
+sign_8(31:69) = -1;% sign is manually set
 plot(e_0, vm_0 .* sign_0, 'r', e_4, vm_4 .* sign_4, 'b', e_8, vm_8 .* sign_8); % von misess of homogenized stress
 grid on;
-title('Multi-loading - tension - Von Mises');
+title('Multi-loading - compression - Von Mises');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('\pm Von Mises [Pa]');
@@ -57,7 +57,7 @@ ylabel('\pm Von Mises [Pa]');
 s11e22_plot = figure(2);
 plot(e_0, s_0(:, 1), 'r', e_4, s_4(:, 1), 'b', e_8, s_8(:, 1));
 grid on;
-title('Multi-loading, tension, \sigma_{11} - \epsilon_{22}');
+title('Multi-loading, compression, \sigma_{11} - \epsilon_{22}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{11} [Pa]');
@@ -66,7 +66,7 @@ ylabel('Stress \sigma_{11} [Pa]');
 s22e22_plot = figure(3);
 plot(e_0, s_0(:, 2), 'r', e_4, s_4(:, 2), 'b', e_8, s_8(:, 2));
 grid on;
-title('Multi-loading, tension, \sigma_{22} - \epsilon_{22}');
+title('Multi-loading, compression, \sigma_{22} - \epsilon_{22}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{22} [Pa]');
@@ -75,7 +75,7 @@ ylabel('Stress \sigma_{22} [Pa]');
 s33e22_plot = figure(4);
 plot(e_0, s_0(:, 3), 'r', e_4, s_4(:, 3), 'b', e_8, s_8(:, 3));
 grid on;
-title('Multi-loading, tension, \sigma_{33} - \epsilon_{22}');
+title('Multi-loading, compression, \sigma_{33} - \epsilon_{22}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{33} [Pa]');
@@ -84,7 +84,7 @@ ylabel('Stress \sigma_{33} [Pa]');
 s12e22_plot = figure(5);
 plot(e_0, s_0(:, 4), 'r', e_4, s_4(:, 4), 'b', e_8, s_8(:, 4));
 grid on;
-title('Multi-loading, tension, \sigma_{12} - \epsilon_{22}');
+title('Multi-loading, compression, \sigma_{12} - \epsilon_{22}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{12} [Pa]');
@@ -93,7 +93,7 @@ ylabel('Stress \sigma_{12} [Pa]');
 s13e22_plot = figure(6);
 plot(e_0, s_0(:, 5), 'r', e_4, s_4(:, 5), 'b', e_8, s_8(:, 5));
 grid on;
-title('Multi-loading, tension, \sigma_{13} - \epsilon_{22}');
+title('Multi-loading, compression, \sigma_{13} - \epsilon_{22}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{13} [Pa]');
@@ -102,7 +102,7 @@ ylabel('Stress \sigma_{13} [Pa]');
 s23e22_plot = figure(7);
 plot(e_0, s_0(:, 6), 'r', e_4, s_4(:, 6), 'b', e_8, s_8(:, 6));
 grid on;
-title('Multi-loading, tension, \sigma_{23} - \epsilon_{22}');
+title('Multi-loading, compression, \sigma_{23} - \epsilon_{22}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{23} [Pa]');
