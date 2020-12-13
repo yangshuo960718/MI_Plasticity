@@ -6,7 +6,7 @@ mu = 0.7692e9;
 a = lbda + 2 * mu;
 
 % load mesh
-load('./mesh/sq_mesh0d4.mat');
+load('./mesh/sq_mesh0d8.mat');
 p = p';
 t = t';
 [S] = GetEleArea(p, t); % S is area
@@ -68,5 +68,5 @@ MacroStrain = [Load1, Unload1, Load2, Unload2, Load3] * 0.004;
 %plot(MacroStrain, HomoStress(:, 1), '-o');
 plot(MacroStrain, HomoStress(:, 4), '-o');
 
-%save('./Plot/multi-load/shear12/0d4_stress_strain.mat', 'MacroStrain', 'HomoStress');
+%save('./Plot/multi-load/shear12/0d8_stress_strain.mat', 'MacroStrain', 'HomoStress');
 grid on;

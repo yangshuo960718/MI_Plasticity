@@ -7,7 +7,7 @@ clc, clear
 % g_d8 = (1 - d8)^2;
 
 % load abaqus data
-fileDir = './Plot/multi-load/compression/';
+fileDir = './Plot/multi-load/shear12/';
 
 sq_0 = load([fileDir, '0_stress_strain.mat']);
 e_0 = sq_0.MacroStrain'; % nominal strain
@@ -43,21 +43,21 @@ vm_8 = von_mises(s_8);
 % plot(e_0t, s_0t_22, 'r', e_4t, s_4t_22, 'b', e_8t, s_8t_22);
 vm_plot = figure(1);
 [sign_0, sign_4, sign_8] = deal(ones(size(e_0)));
-sign_0(32:74) = -1;
-sign_4(32:73) = -1;
-sign_8(31:69) = -1;% sign is manually set
+sign_0(29:71) = -1;
+sign_4(29:71) = -1;
+sign_8(29:71) = -1;% sign is manually set
 plot(e_0, vm_0 .* sign_0, 'r', e_4, vm_4 .* sign_4, 'b', e_8, vm_8 .* sign_8); % von misess of homogenized stress
 grid on;
-title('Multi-loading - compression - Von Mises');
+title('Multi-loading - shear1212 - Von Mises');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
-xlabel('Strain \epsilon_{22}');
+xlabel('Strain \epsilon_{12}');
 ylabel('\pm Von Mises [Pa]');
 
 %% plot s11 - e22
 s11e22_plot = figure(2);
 plot(e_0, s_0(:, 1), 'r', e_4, s_4(:, 1), 'b', e_8, s_8(:, 1));
 grid on;
-title('Multi-loading, compression, \sigma_{11} - \epsilon_{22}');
+title('Multi-loading, shear1212, \sigma_{11} - \epsilon_{12}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{11} [Pa]');
@@ -66,7 +66,7 @@ ylabel('Stress \sigma_{11} [Pa]');
 s22e22_plot = figure(3);
 plot(e_0, s_0(:, 2), 'r', e_4, s_4(:, 2), 'b', e_8, s_8(:, 2));
 grid on;
-title('Multi-loading, compression, \sigma_{22} - \epsilon_{22}');
+title('Multi-loading, shear1212, \sigma_{22} - \epsilon_{12}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{22} [Pa]');
@@ -75,7 +75,7 @@ ylabel('Stress \sigma_{22} [Pa]');
 s33e22_plot = figure(4);
 plot(e_0, s_0(:, 3), 'r', e_4, s_4(:, 3), 'b', e_8, s_8(:, 3));
 grid on;
-title('Multi-loading, compression, \sigma_{33} - \epsilon_{22}');
+title('Multi-loading, shear1212, \sigma_{33} - \epsilon_{12}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{33} [Pa]');
@@ -84,7 +84,7 @@ ylabel('Stress \sigma_{33} [Pa]');
 s12e22_plot = figure(5);
 plot(e_0, s_0(:, 4), 'r', e_4, s_4(:, 4), 'b', e_8, s_8(:, 4));
 grid on;
-title('Multi-loading, compression, \sigma_{12} - \epsilon_{22}');
+title('Multi-loading, shear1212, \sigma_{12} - \epsilon_{12}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{12} [Pa]');
@@ -93,7 +93,7 @@ ylabel('Stress \sigma_{12} [Pa]');
 s13e22_plot = figure(6);
 plot(e_0, s_0(:, 5), 'r', e_4, s_4(:, 5), 'b', e_8, s_8(:, 5));
 grid on;
-title('Multi-loading, compression, \sigma_{13} - \epsilon_{22}');
+title('Multi-loading, shear1212, \sigma_{13} - \epsilon_{12}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{13} [Pa]');
@@ -102,28 +102,28 @@ ylabel('Stress \sigma_{13} [Pa]');
 s23e22_plot = figure(7);
 plot(e_0, s_0(:, 6), 'r', e_4, s_4(:, 6), 'b', e_8, s_8(:, 6));
 grid on;
-title('Multi-loading, compression, \sigma_{23} - \epsilon_{22}');
+title('Multi-loading, shear1212, \sigma_{23} - \epsilon_{12}');
 legend('d=0', 'd=0.0263', 'd=0.2064', 'Location', 'best');
 xlabel('Strain \epsilon_{22}');
 ylabel('Stress \sigma_{23} [Pa]');
 
 %% save plot
 savefig(vm_plot, [fileDir, 'vm.fig']);
-savefig(s11e22_plot, [fileDir, 's11e22.fig']);
-savefig(s22e22_plot, [fileDir, 's22e22.fig']);
-savefig(s33e22_plot, [fileDir, 's33e22.fig']);
-savefig(s12e22_plot, [fileDir, 's12e22.fig']);
-savefig(s13e22_plot, [fileDir, 's13e22.fig']);
-savefig(s23e22_plot, [fileDir, 's23e22.fig']);
+savefig(s11e22_plot, [fileDir, 's11e12.fig']);
+savefig(s22e22_plot, [fileDir, 's22e12.fig']);
+savefig(s33e22_plot, [fileDir, 's33e12.fig']);
+savefig(s12e22_plot, [fileDir, 's12e12.fig']);
+savefig(s13e22_plot, [fileDir, 's13e12.fig']);
+savefig(s23e22_plot, [fileDir, 's23e12.fig']);
 
 %% save plot .svg
 saveas(vm_plot, [fileDir, 'vm.svg']);
-saveas(s11e22_plot, [fileDir, 's11e22.svg']);
-saveas(s22e22_plot, [fileDir, 's22e22.svg']);
-saveas(s33e22_plot, [fileDir, 's33e22.svg']);
-saveas(s12e22_plot, [fileDir, 's12e22.svg']);
-saveas(s13e22_plot, [fileDir, 's13e22.svg']);
-saveas(s23e22_plot, [fileDir, 's23e22.svg']);
+saveas(s11e22_plot, [fileDir, 's11e12.svg']);
+saveas(s22e22_plot, [fileDir, 's22e12.svg']);
+saveas(s33e22_plot, [fileDir, 's33e12.svg']);
+saveas(s12e22_plot, [fileDir, 's12e12.svg']);
+saveas(s13e22_plot, [fileDir, 's13e12.svg']);
+saveas(s23e22_plot, [fileDir, 's23e12.svg']);
 
 %%
 % compute von mises

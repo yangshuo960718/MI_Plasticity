@@ -207,7 +207,7 @@ $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
 ### 3.3 Shear test I
 
 * BC's: $\overline{\varepsilon}=\varepsilon_{12}(\mathbf{e}_1\otimes\mathbf{e}_2+\mathbf{e}_2\otimes\mathbf{e}_1),$ where $\varepsilon_{12}=0\rightarrow0.004\rightarrow-0.004\rightarrow0.004.$
-   
+  
 * Harding behavior
 
   $K(\alpha)=\sigma_Y+\overline{K}\alpha$
@@ -215,3 +215,29 @@ $\varepsilon_{11}=\varepsilon_{33}=-{1\over 2}\varepsilon_{22}.$
   where $\sigma_Y=300$ MPa, $\overline{K}=100$ GPa.
 
   ![hardening behavior - isotropic (linear)](./Plot/hardening_plots/hardening_iso_li.svg)
+  
+* Plots
+
+  | Figure                                  | Dir                                  |
+  | --------------------------------------- | ------------------------------------ |
+  | $\pm\text{Von Mises} -\varepsilon_{12}$ | `./Plot/multi-load/shear12/vm.svg`     |
+  | $\sigma_{11}-\varepsilon_{22}$      | `./Plot/multi-load/shear12/s11e12.svg` |
+  | $\sigma_{22}-\varepsilon_{22}$        | `./Plot/multi-load/shear12/s22e12.svg` |
+  | $\sigma_{33}-\varepsilon_{22}$ | `./Plot/multi-load/shear12/s33e12.svg` |
+  | $\sigma_{12}-\varepsilon_{22}$ | `./Plot/multi-load/shear12/s12e12.svg` |
+  | $\sigma_{13}-\varepsilon_{22}$ | `./Plot/multi-load/shear12/s13e12.svg` |
+  | $\sigma_{23}-\varepsilon_{22}$ | `./Plot/multi-load/shear12/s23e12.svg` |
+  
+  ![vms](./Plot/multi-load/shear12/vm.svg)
+  
+  ![s11e22](./Plot/multi-load/shear12/s11e12.svg)
+  
+  ![s22e22](./Plot/multi-load/shear12/s22e12.svg)
+  
+  ![s33e22](./Plot/multi-load/shear12/s33e12.svg)
+  
+  ![s12e22](./Plot/multi-load/shear12/s12e12.svg)
+  
+  ![s13e22](./Plot/multi-load/shear12/s13e12.svg)
+  
+  ![s23e22](./Plot/multi-load/shear12/s23e12.svg)

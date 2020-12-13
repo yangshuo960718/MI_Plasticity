@@ -49,7 +49,7 @@
 clc, clear
 
 % Open file
-fname = './ReportFile/sq_0d4_ml_s12.rpt';
+fname = './ReportFile/sq_0d8_ml_s12.rpt';
 fid = fopen(fname);
 if fid==-1
     error('File not found or permission denied.');
